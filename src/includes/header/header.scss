@@ -1,4 +1,21 @@
 .header {
-	padding: 20px 0;
-	background: #ccc;
+	display: flex;
+	justify-content: space-between;
+	padding: 26px 10px 22px;
+	border-bottom: 1px solid #cfcfcf;
+
+	&__buttons {
+		display: flex;
+		justify-content: space-between;
+		width: 135px;
+		padding-top: 3px;
+	}
+
+	&__button {
+		all: initial;
+		&--cart {
+			position: relative;
+			bottom: 3px;
+		}
+	}
 }
