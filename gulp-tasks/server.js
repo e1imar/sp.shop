@@ -46,7 +46,7 @@ export default function server() {
 		injectchanges: true,
 		notify: false,
 		open: false,
-		port: 9000,
+		port: 4000,
 		logPrefix: 'SP.Starter',
 		files: watchFiles,
 	});
