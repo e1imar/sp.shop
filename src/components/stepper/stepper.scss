@@ -1,0 +1,68 @@
+.stepper {
+	width: 100%;
+	margin-top: 100px;
+}
+
+.stepper__progressbar {
+	counter-reset: step;
+	padding-bottom: 100px;
+}
+
+.stepper__step {
+	list-style-type: none;
+	float: left;
+	width: 25%;
+	position: relative;
+	text-align: center;
+	font-weight: 600;
+}
+
+.stepper__step:before {
+	/* CSS for creating steper block before the li item*/
+	content: counter(step);
+	counter-increment: step;
+	height: 30px;
+	width: 30px;
+	line-height: 30px;
+	border: 1px solid #3366ff;
+	display: block;
+	text-align: center;
+	margin: 0 auto 10px auto;
+	border-radius: 50%;
+	background-color: #3366ff;
+	color: white;
+}
+
+.stepper__step:after {
+	/* CSS for creating horizontal line*/
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	background-color: #3366ff;
+	top: 15px;
+	left: -50%;
+	z-index: -1;
+}
+
+.stepper__step:first-child:after {
+	content: none;
+}
+
+.stepper__step--active:before {
+	border-color: #3366ff;
+	background-color: white;
+	color: black;
+}
+
+.stepper__step--active ~ .stepper__step:before {
+	border-color: #d5d5d5;
+	background-color: white;
+	color: #d5d5d5;
+}
+
+.stepper__step--active + .stepper__step:after {
+	background-color: #d5d5d5;
+}
+
+// .stepper__step:last-child::after {display: none;}
