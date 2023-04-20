@@ -1,8 +1,7 @@
 .header {
 	display: flex;
 	justify-content: space-between;
-	padding: 26px 10px 22px;
-	border-bottom: 1px solid #cfcfcf;
+	padding: 26px 0 22px;
 
 	&__buttons {
 		display: flex;
@@ -18,4 +17,8 @@
 			bottom: 3px;
 		}
 	}
+}
+
+.headersBorder {
+	border-bottom: 1px solid #cfcfcf;
 }

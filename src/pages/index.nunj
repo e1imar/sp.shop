@@ -11,7 +11,7 @@
 {% set content = [
 	{title: 'Account'},
 	{title: 'Shipping'},
-	{title: 'Billing'},
+	{title: 'Billing', active: true, content: 'himam'},
 	{title: 'Review'}
 ] %}
 

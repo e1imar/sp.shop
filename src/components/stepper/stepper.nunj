@@ -1,22 +1,26 @@
 {% from "../button/button.nunj" import button %}
 
 {% macro stepper(steps) %}
-  <ol class="stepper">
-    {% for step in steps  %}
-      <li class="c-stepper__item">
-          <h3 class="c-stepper__title">{{step.title}}</h3>
-      </li>
-    {% endfor %}
-  </ol>
-  <div class="stepper__content">{{steps[2].content}}</div>
-  <div class="stepper__buttons">
-    {{ button({
-      className: 'button, button--back',
-      children: 'Back'
-    }) }}
-    {{ button({
-      className: 'button, button--check',
-      children: 'Check Out'
-    }) }}
+  <div class="globalWrapper">  
+    <div class="stepper">
+      <ul class="stepper__progressbar">
+        {% for step in steps %}
+            <li class="stepper__step {% if step.active%}stepper__step--active{% endif %}">
+              {{step.title}}
+            </li>
+        {% endfor %}
+      </ul>
+      <div class="stepper__content">{{steps[2].content}}</div>
+      <div class="stepper__buttons">
+        {{ button({
+          className: 'button, button--back',
+          children: 'Back'
+        }) }}
+        {{ button({
+          className: 'button, button--check',
+          children: 'Check Out'
+        }) }}
+      </div>
+    </div>
   </div>
 {% endmacro %}
