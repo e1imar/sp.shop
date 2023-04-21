@@ -108,6 +108,7 @@ a[href^='tel'] {
 }
 
 button {
+	all: initial;
 	user-select: none;
 	border-radius: 0;
 }

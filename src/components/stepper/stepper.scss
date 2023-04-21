@@ -81,3 +81,14 @@
 		}
 	}
 }
+
+.stepper__buttons {
+	display: flex;
+	justify-content: space-between;
+	padding: 10% 0;
+}
+
+.button--back {
+	background: #fff;
+	color: black;
+}

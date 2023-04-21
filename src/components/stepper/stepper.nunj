@@ -13,11 +13,11 @@
       <div class="stepper__content">{{steps[2].content}}</div>
       <div class="stepper__buttons">
         {{ button({
-          className: 'button, button--back',
+          className: 'button--back',
           children: 'Back'
         }) }}
         {{ button({
-          className: 'button, button--check',
+          className: 'button--check',
           children: 'Check Out'
         }) }}
       </div>
