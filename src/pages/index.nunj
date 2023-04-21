@@ -3,6 +3,7 @@
 {% from "../components/button/button.nunj" import button %}
 {% from "../components/stepper/stepper.nunj" import stepper %}
 {% from "../components/icon/icon.nunj" import icon %}
+{% from "../components/billing/billing.nunj" import billing %}
 
 {# Пример расширения существующего блока #}
 {# Например можно использовать для добавления уникальных тайтлов для каждой страницы #}
@@ -11,7 +12,7 @@
 {% set content = [
 	{title: 'Account'},
 	{title: 'Shipping'},
-	{title: 'Billing', active: true, content: 'himam'},
+	{title: 'Billing', active: true, content: billing},
 	{title: 'Review'}
 ] %}
 

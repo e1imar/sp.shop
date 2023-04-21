@@ -10,7 +10,7 @@
             </li>
         {% endfor %}
       </ul>
-      <div class="stepper__content">{{steps[2].content}}</div>
+      <div class="stepper__content">{{ steps[2].content() }}</div>
       <div class="stepper__buttons">
         {{ button({
           className: 'button--back',
