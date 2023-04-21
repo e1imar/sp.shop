@@ -1,4 +1,4 @@
-<div class="globalWrapper headersBorder">
+<div class="globalWrapper globalWrapper--headersBorder">
 	<div class="header">
 			<img class="logo" src="/assets/images/Logo.png" alt="logo"/>
 			<div class="header__buttons">
