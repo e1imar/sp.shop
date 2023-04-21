@@ -1,5 +1,5 @@
 .button {
-	// @extend .transition-active;
+	@extend .transition-active;
 	font-family: 'Roboto';
 	display: flex;
 	align-items: center;
@@ -7,12 +7,9 @@
 	background: #3366ff;
 	border: 1px solid #3366ff;
 	border-radius: 3px;
-	// height: 54px;
 	color: #fff;
-	// font-weight: 700;
 	cursor: pointer;
 	font-size: 14px;
-	// letter-spacing: -0.5px;
 	padding: 3.6% 9.8%;
 
 	&:hover {
