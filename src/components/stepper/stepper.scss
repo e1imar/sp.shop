@@ -85,10 +85,11 @@
 .stepper__buttons {
 	display: flex;
 	justify-content: space-between;
-	padding: 10% 0;
+	// padding: 10% 0;
 }
 
 .button--back {
+	border-color: #cfcfcf;
 	background: #fff;
 	color: black;
 }
