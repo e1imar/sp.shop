@@ -4,7 +4,7 @@
     <form class="billing__form">
       <fieldset class="billing__method">
         <label class="billing__label">
-          <input class="billing__checkbox" type="checkbox" required/>Pay with Credit Card
+          <input class="billing__checkbox" type="checkbox" required/> Pay with Credit Card
         </label>
         <label class="billing__label">
           <input class="billing__checkbox" type="checkbox" required/>
@@ -26,7 +26,7 @@
           <input class="billing__expireDate" id="billing__expireDate" type="month" required/>
         </fieldset>
         <fieldset class="billing__cardCCV">
-          <label class="billing__label" for="billing__CCVnumber">CCV code</label>
+          <label class="billing__label" for="billing__CCVnumber">CCV code <span>?</span></label>
           <input class="billing__CCVnumber" id="billing__CCVnumber" type="password" maxlength="3" required/>
         </fieldset>
       </fieldset>
@@ -34,9 +34,10 @@
         <label class="billing__label"><input class="billing__checkbox" type="checkbox"  required/>
         Save information of this credit card
         </label>
-        <label class="billing__label"><input class="billing__checkbox" type="checkbox" required/>I accept
-          <span class="billing__link">the terms and conditions</span> and the
-          <span class="billing__link">Privacy Policies</span>
+        <label class="billing__label"><input class="billing__checkbox" type="checkbox" required/>
+          I accept
+          <a class="billing__link">the terms and conditions</a> and the
+          <a class="billing__link">Privacy Policies</a>
         </label>
       </fieldset>
     </form>
