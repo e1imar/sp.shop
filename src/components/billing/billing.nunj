@@ -3,41 +3,43 @@
     <h1 class="billing__head">Billing information</h1>
     <form class="billing__form">
       <fieldset class="billing__method">
-        <label class="billing__label">
-          <input class="billing__checkbox" type="checkbox" required/> Pay with Credit Card
+        <label class="billing__label billing__label--1">
+          <input class="billing__checkbox billing__checkbox--round" type="checkbox" required checked/> Pay with Credit Card
         </label>
         <label class="billing__label">
-          <input class="billing__checkbox" type="checkbox" required/>
+          <input class="billing__checkbox billing__checkbox--round" type="checkbox" required/>
           <img class="billing__paypal" src="/assets/images/PayPal 1.png" alt="paypal"/>
         </label>
       </fieldset>
-      <fieldset class="billing__card">
-        <label class="billing__label" for="billing__cardName">Name on card</label>
-        <input class="billing__cardName" id="billing__cardName" type="text" required/>
-        <label class="billing__label" for="card">Card nubmer</label>
-        <fieldset class="billing__cardNumbers">
-          <input class="billing__cardNumber" type="nubmer" id="card" maxlength="4" required/>
-          <input class="billing__cardNumber" type="nubmer" maxlength="4" required/>
-          <input class="billing__cardNumber" type="nubmer" maxlength="4" required/>
-          <input class="billing__cardNumber" type="nubmer" maxlength="4" required/>
+      <fieldset class="payCard">
+        <label class="payCard__label" for="payCard__name">Name on card</label>
+        <input class="payCard__input payCard__input--name" id="payCard__name" type="text" placeholder="   Placeholder Text" required/>
+        <label class="payCard__label" for="card">Card number</label>
+        <fieldset class="payCard__number">
+          <input class="payCard__input payCard__input--number" type="nubmer" id="card" maxlength="4" required/>
+          <input class="payCard__input payCard__input--number" type="nubmer" maxlength="4" required/>
+          <input class="payCard__input payCard__input--number" type="nubmer" maxlength="4" required/>
+          <input class="payCard__input payCard__input--number" type="nubmer" maxlength="4" required/>
         </fieldset>
-        <fieldset class="billing__cardExpire">
-          <label class="billing__label" for="billing__expireDate">Expire date</label>
-          <input class="billing__expireDate" id="billing__expireDate" type="month" required/>
+        <fieldset class="payCard__expire">
+          <label class="payCard__label" for="payCard__expireDate">Expire date</label>
+          <input class="payCard__input payCard__input--expireDate" id="payCard__expireDate" type="month" required/>
         </fieldset>
-        <fieldset class="billing__cardCCV">
-          <label class="billing__label" for="billing__CCVnumber">CCV code <span>?</span></label>
-          <input class="billing__CCVnumber" id="billing__CCVnumber" type="password" maxlength="3" required/>
+        <fieldset class="payCard__CVV">
+          <label class="payCard__label" for="payCard__CVVnumber">CVV code <span>?</span></label>
+          <input class="payCard__input payCard__input--CVVnumber" id="payCard__CVVnumber" type="password" maxlength="3" required/>
         </fieldset>
       </fieldset>
       <fieldset class="billing__agr">
-        <label class="billing__label"><input class="billing__checkbox" type="checkbox"  required/>
+        <label class="billing__label billing__label--bott"><input class="billing__checkbox billing__checkbox--last" type="checkbox"  required/>
         Save information of this credit card
         </label>
-        <label class="billing__label"><input class="billing__checkbox" type="checkbox" required/>
-          I accept
-          <a class="billing__link">the terms and conditions</a> and the
-          <a class="billing__link">Privacy Policies</a>
+        <label class="billing__label billing__label--bott billing__label--bott--last">
+          <input class="billing__checkbox billing__checkbox--last" type="checkbox" required/>
+          <div class="billing__terms">I accept
+            <a class="billing__link">the terms and conditions</a> and the
+            <a class="billing__link">Privacy Policies</a>
+          </div>
         </label>
       </fieldset>
     </form>
