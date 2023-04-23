@@ -12,29 +12,23 @@
         </label>
       </fieldset>
       <fieldset class="payCard">
-        <label class="payCard__label" for="payCard__name">Name on card</label>
+        <label class="payCard__label payCard__label--name" for="payCard__name">Name on card</label>
         <input class="payCard__input payCard__input--name" id="payCard__name" type="text" placeholder="   Placeholder Text" required/>
-        <label class="payCard__label" for="card">Card number</label>
-        <fieldset class="payCard__number">
-          <input class="payCard__input payCard__input--number" type="nubmer" id="card" maxlength="4" required/>
-          <input class="payCard__input payCard__input--number" type="nubmer" maxlength="4" required/>
-          <input class="payCard__input payCard__input--number" type="nubmer" maxlength="4" required/>
-          <input class="payCard__input payCard__input--number" type="nubmer" maxlength="4" required/>
-        </fieldset>
-        <fieldset class="payCard__expire">
-          <label class="payCard__label" for="payCard__expireDate">Expire date</label>
+        <label class="payCard__label payCard__label--number" for="card">Card number</label>
+          <input class="payCard__input payCard__input--number1" type="nubmer" id="card" maxlength="4" required/>
+          <input class="payCard__input payCard__input--number2" type="nubmer" maxlength="4" required/>
+          <input class="payCard__input payCard__input--number3" type="nubmer" maxlength="4" required/>
+          <input class="payCard__input payCard__input--number4" type="nubmer" maxlength="4" required/>
+          <label class="payCard__label payCard__label--expireDate" for="payCard__expireDate">Expire date</label>
           <input class="payCard__input payCard__input--expireDate" id="payCard__expireDate" type="month" required/>
-        </fieldset>
-        <fieldset class="payCard__CVV">
-          <label class="payCard__label" for="payCard__CVVnumber">CVV code <span>?</span></label>
+          <label class="payCard__label payCard__label--CVVnumber" for="payCard__CVVnumber">CVV code <span class="payCard__CVVInfo">?</span></label>
           <input class="payCard__input payCard__input--CVVnumber" id="payCard__CVVnumber" type="password" maxlength="3" required/>
-        </fieldset>
       </fieldset>
       <fieldset class="billing__agr">
         <label class="billing__label billing__label--bott"><input class="billing__checkbox billing__checkbox--last" type="checkbox" checked required/>
         Save information of this credit card
         </label>
-        <label class="billing__label billing__label--bott billing__label--bott--last">
+        <label class="billing__label billing__label--bott">
           <input class="billing__checkbox billing__checkbox--last" type="checkbox" required/>
           <div class="billing__terms">I accept
             <a class="billing__link">the terms and conditions</a> and the
