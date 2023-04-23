@@ -4,10 +4,10 @@
     <form class="billing__form">
       <fieldset class="billing__method">
         <label class="billing__label billing__label--1">
-          <input class="billing__checkbox billing__checkbox--round" type="checkbox" required checked/> Pay with Credit Card
+          <input class="billing__radio" type="radio" name="billing__method" checked/> Pay with Credit Card
         </label>
         <label class="billing__label">
-          <input class="billing__checkbox billing__checkbox--round" type="checkbox" required/>
+          <input class="billing__radio" type="radio" name="billing__method"/>
           <img class="billing__paypal" src="/assets/images/PayPal 1.png" alt="paypal"/>
         </label>
       </fieldset>
@@ -31,7 +31,7 @@
         </fieldset>
       </fieldset>
       <fieldset class="billing__agr">
-        <label class="billing__label billing__label--bott"><input class="billing__checkbox billing__checkbox--last" type="checkbox"  required/>
+        <label class="billing__label billing__label--bott"><input class="billing__checkbox billing__checkbox--last" type="checkbox" checked required/>
         Save information of this credit card
         </label>
         <label class="billing__label billing__label--bott billing__label--bott--last">

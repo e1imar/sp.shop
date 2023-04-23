@@ -3,11 +3,10 @@
 
 	&__head {
 		font-size: 18px;
-		margin-bottom: 13px;
 	}
 
 	&__form {
-		padding: 12px 0;
+		padding: 25px 0;
 	}
 
 	&__label {
@@ -19,8 +18,40 @@
 			margin-bottom: 12px;
 			color: #8c8c8c;
 			justify-content: baseline;
+		}
+	}
 
-			// &--last {display: inline-block; width: 70%;}
+	&__checkbox,
+	&__radio {
+		position: relative;
+		bottom: 1px;
+		&--last {
+			margin-right: 8px;
+		}
+		margin-right: 6px;
+		width: 18px;
+		height: 18px;
+		border: 1px solid #cfcfcf;
+		accent-color: #3366ff;
+		appearance: none;
+		-webkit-appearance: none;
+		outline: none;
+		cursor: pointer;
+		vertical-align: middle;
+	}
+
+	&__radio {
+		border-radius: 50%;
+
+		&:checked {
+			appearance: unset;
+			background: url('/assets/images/Ellipse 11.svg') center no-repeat;
+		}
+	}
+	&__checkbox {
+		&:checked {
+			appearance: unset;
+			background: url('/assets/images/Rectangle 4.svg') center no-repeat;
 		}
 	}
 
@@ -28,41 +59,14 @@
 		width: 70%;
 	}
 
-	&__checkbox {
-		&--last {
-			margin-right: 7px;
-		}
-		margin-right: 5px;
-		width: 18px;
-		height: 18px;
-		&--round {
-			// width:18px;
-			// height: 18px;
-			border-radius: 50%;
-			vertical-align: middle;
-			border: 1px solid #cfcfcf;
-			appearance: none;
-			-webkit-appearance: none;
-			outline: none;
-			cursor: pointer;
-
-			&:checked {
-				appearance: auto;
-				clip-path: circle(50% at 50% 50%);
-				background-color: blue;
-			}
-		}
-	}
-
 	&__paypal {
+		margin-left: 6px;
 		position: relative;
-		left: 7px;
 		bottom: 3px;
 	}
 }
 
 .payCard {
-	// margin-top: -3px;
 	margin: -3px 0 37px;
 
 	&__number {
