@@ -108,6 +108,9 @@
 		&--expireDate {
 			grid-column: 1;
 			grid-row: 12;
+			&::-webkit-calendar-picker-indicator {
+				display: none;
+			}
 		}
 
 		&--name {
