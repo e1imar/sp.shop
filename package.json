@@ -7,7 +7,7 @@
     "url": "https://github.com/sborkaproject/SP.Starter"
   },
   "scripts": {
-    "start": "gulp",
+    "start": "set NODE_OPTIONS=--openssl-legacy-provider && gulp",
     "build": "cross-env NODE_ENV=production NODE_OPTIONS=--openssl-legacy-provider gulp production",
     "zip": "cross-env NODE_ENV=production gulp zip",
     "prettier": "prettier ./src/**/*.{scss,js} --write",
