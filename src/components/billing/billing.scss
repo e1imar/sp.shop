@@ -68,14 +68,13 @@
 
 .payCard {
 	display: grid;
-	grid-template-columns: min-content 1fr min-content 1fr min-content 1fr min-content;
+	grid-template-columns: 22vw 1fr 22vw 1fr 22vw 1fr 22vw;
 	grid-template-rows: repeat(3, 24px min-content 4px min-content);
 	margin: -3px 0 37px;
 
 	&__input {
 		grid-row: 4;
 		grid-column: 1/8;
-		width: 71px;
 		border: 0;
 		background-color: #ededf1;
 		border-radius: 3px;
@@ -155,5 +154,33 @@
 		margin-left: 2px;
 		position: relative;
 		bottom: 1px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.billing {
+		&__head,
+		&__method,
+		&__agr {
+			margin-left: 30px;
+		}
+		&__label--1 {
+			margin-right: 78px;
+		}
+		&__form {
+			padding: 45px 0 19px;
+		}
+	}
+
+	.payCard {
+		box-sizing: border-box;
+		width: 550px;
+		height: 298px;
+		margin: 37px 0 41px 0;
+		padding: 0 29px;
+		border: 1px solid #cfcfcf;
+		box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.19);
+		border-radius: 5px;
+		grid-template-columns: 100px 1fr 100px 1fr 100px 1fr 100px;
 	}
 }

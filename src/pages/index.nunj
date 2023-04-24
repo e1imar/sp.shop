@@ -1,8 +1,6 @@
 {% extends "../templates/base.nunj" %}
 
-{% from "../components/button/button.nunj" import button %}
 {% from "../components/stepper/stepper.nunj" import stepper %}
-{% from "../components/icon/icon.nunj" import icon %}
 {% from "../components/billing/billing.nunj" import billing %}
 
 {# Пример расширения существующего блока #}
@@ -17,7 +15,6 @@
 ] %}
 
 {% block content %}
-
 	{% include '../includes/header/header.nunj' %}
 	<main class="main">
 		{{stepper(content)}}
