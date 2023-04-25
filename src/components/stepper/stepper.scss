@@ -133,6 +133,34 @@
 			padding: 8px 30px;
 		}
 	}
+
+	@media screen and (min-width: 1640px) {
+		&__step {
+			&:nth-child(2) {
+				left: 6.6%;
+				&:after {
+					left: -20%;
+				}
+			}
+
+			&:nth-child(3) {
+				right: 7.7%;
+			}
+
+			&:last-child:after {
+				left: -750%;
+				width: 800%;
+			}
+		}
+
+		&__content {
+			padding-left: 19.4%;
+		}
+
+		&__buttons {
+			padding: 8px 22.1%;
+		}
+	}
 }
 
 .button--back {
