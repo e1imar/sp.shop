@@ -7,3 +7,8 @@
 	margin: auto;
 	box-sizing: content-box;
 }
+
+.main {
+	display: grid;
+	grid-template-columns: auto min-content;
+}

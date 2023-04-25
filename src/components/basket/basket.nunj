@@ -1,0 +1,36 @@
+
+{% set count = 1 %}
+
+{% macro basket(items) %}
+  <div class="basket">
+    <div class="basket__items">
+      <h2 class="basket__header">My basket</h2>
+      <ul class="basket__list">
+        {% for item in items %}
+          <li class="item">
+            <img class="item__img" src="{{item.img}}" alt="product's picture"></img>
+            <div class="item__info">
+              <h3 class="item__name">{{item.name}}</h3>
+              <button class="item__button" type="button"><img src="/assets/images/Vector(1).png" alt="minus button"/></button>
+              <span class="item__count">{{count}}</span>
+              <button class="item__button" type="button"><img src="/assets/images/Vector(2).png" alt="plus button"/></button>
+              <span class="item__price">$ {{item.price}}</span>
+            </div>
+            <button class="item__button"><img src="/assets/images/Vector(3).png" alt="close"/></button>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="basket__promo">
+      <h4 class="basket__promoHeader">Promo code</h4>
+      <input class="basket__input" type="text" placeholder="   Placeholder Text"/>
+      <button class="button">Apply</button>
+    </div>
+    <div class="counter">
+      <div class="counter__info counter__info">Subtotal <span class="counter__price">$<span class="counter__number">{{1050}}</span></span></div>
+      <div class="counter__info counter__info">Tax <span class="counter__price">$<span>{{100}}</span></span></div>
+      <div class="counter__info counter__info">Shipping <span class="counter__price">$<span>{{150}}</span></span></div>
+      <div class="counter__info counter__info--total">Total <span class="counter__price counter__price--total">$<span class="counter__number">{{1300}}</span></span></div>
+    </div>
+  </div>
+{% endmacro %}

@@ -8,17 +8,25 @@
 	}
 
 	&__buttons {
-		display: flex;
-		justify-content: space-between;
-		width: 135px;
-		padding-top: 3px;
+		padding-top: 5px;
 	}
 
 	&__button {
 		all: initial;
+
 		&--cart {
 			position: relative;
-			bottom: 3px;
+			bottom: 4px;
+		}
+
+		margin-left: 23px;
+
+		&--burger {
+			position: relative;
+			top: 2px;
+			@media screen and (min-width: 1200px) {
+				display: none;
+			}
 		}
 	}
 

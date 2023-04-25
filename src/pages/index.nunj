@@ -2,6 +2,7 @@
 
 {% from "../components/stepper/stepper.nunj" import stepper %}
 {% from "../components/billing/billing.nunj" import billing %}
+{% from "../components/basket/basket.nunj" import basket %}
 
 {# Пример расширения существующего блока #}
 {# Например можно использовать для добавления уникальных тайтлов для каждой страницы #}
@@ -18,5 +19,6 @@
 	{% include '../includes/header/header.nunj' %}
 	<main class="main">
 		{{stepper(content)}}
+		{{basket(products)}}
 	</main>
 {% endblock %}

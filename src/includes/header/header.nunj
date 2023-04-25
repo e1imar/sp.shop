@@ -3,6 +3,6 @@
 		<div class="header__buttons">
 			<button class="header__button" type="button"><img class="header__vector" src="/assets/images/Vector.png" alt="Vector"/></button>
 			<button class="header__button header__button--cart" type="button"><img class="header__cart" src="/assets/images/Cart.png" alt="Cart"/></button>
-			<button class="header__button" type="button"><img class="header__burger" src="/assets/images/Burger.png" alt="Burger"/></button>
+			<button class="header__button header__button--burger" type="button"><img class="header__burger" src="/assets/images/Burger.png" alt="Burger"/></button>
 		</div>
 </div>

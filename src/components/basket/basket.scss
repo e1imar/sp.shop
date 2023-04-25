@@ -1,0 +1,85 @@
+.basket {
+	display: none;
+	@media screen and (min-width: 1200px) {
+		display: block;
+	}
+	width: 410px;
+	box-sizing: border-box;
+	border-left: 1px solid #cfcfcf;
+
+	&__header {
+		font-size: 18px;
+		font-weight: 700;
+		margin: 4px 0 -8px;
+	}
+
+	&__items,
+	&__promo,
+	.counter {
+		padding: 39px;
+	}
+
+	&__promo {
+		border-top: 1px solid #cfcfcf;
+		border-bottom: 1px solid #cfcfcf;
+
+		&Header {
+			margin-top: 4px;
+			margin-bottom: 32px;
+			font-size: 18px;
+			font-weight: 700;
+		}
+	}
+
+	&__input {
+		width: 225px;
+		margin-right: 7px;
+	}
+}
+
+.item {
+	display: grid;
+	margin-top: 40px;
+	align-items: flex-start;
+	grid-template-columns: min-content auto min-content;
+	gap: 12px;
+
+	&__name {
+		font-size: 14px;
+		font-weight: 400;
+		height: 47px;
+	}
+
+	&__count {
+		margin: 0px 13px;
+	}
+	&__price {
+		margin-left: 22px;
+	}
+}
+
+.counter {
+	margin-top: -9px;
+	&__info {
+		margin: 18px 0;
+		display: flex;
+		justify-content: space-between;
+
+		&--total {
+			font-size: 18px;
+			font-weight: 700;
+		}
+	}
+
+	&__price {
+		margin-right: 17px;
+	}
+
+	&__number {
+		display: inline-block;
+		margin-left: 1px;
+		&::first-letter {
+			margin-right: 4px;
+		}
+	}
+}

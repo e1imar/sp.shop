@@ -98,7 +98,6 @@
 
 		&__step {
 			&:nth-child(2) {
-				left: 14px;
 				left: 2.1%;
 				&:after {
 					left: -15%;
@@ -106,13 +105,27 @@
 			}
 
 			&:nth-child(3) {
-				right: 54px;
 				right: 8.4%;
 			}
 
 			&:last-child:after {
 				left: -400%;
 				width: 450%;
+			}
+
+			@media screen and (min-width: 1200px) {
+				&:nth-child(2) {
+					left: 2.7%;
+				}
+
+				&:nth-child(3) {
+					right: 9.1%;
+				}
+
+				&:last-child:after {
+					left: -450%;
+					width: 500%;
+				}
 			}
 		}
 

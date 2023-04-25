@@ -22,5 +22,17 @@
 			"title": "Item 2",
 			"text": "Desc 2"
 		}
+	],
+	"products": [
+		{
+			"name": "Amet minim mollit non deserunt ullamco est sit",
+			"img": "/assets/images/Rectangle 1.jpg",
+			"price": 525
+		},
+		{
+			"name": "Amet minim mollit non",
+			"img": "/assets/images/Rectangle 1(1).jpg",
+			"price": 525
+		}
 	]
 }
