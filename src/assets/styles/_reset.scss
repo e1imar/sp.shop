@@ -129,4 +129,10 @@ button {
 	all: initial;
 	user-select: none;
 	border-radius: 0;
+	&:hover {
+		cursor: pointer;
+	}
+	&:active {
+		cursor: default;
+	}
 }
