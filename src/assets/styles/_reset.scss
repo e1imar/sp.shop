@@ -46,6 +46,7 @@ a {
 	&:hover {
 		color: #333;
 		text-decoration: none;
+		cursor: pointer;
 	}
 }
 
@@ -74,6 +75,7 @@ input[type='email'] {
 	background-color: #ededf1;
 	border-radius: 3px;
 	height: 40px;
+	text-indent: 10px;
 }
 
 input[type='text'] {

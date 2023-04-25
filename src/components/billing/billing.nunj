@@ -13,7 +13,7 @@
       </fieldset>
       <fieldset class="payCard">
         <label class="payCard__label payCard__label--name" for="payCard__name">Name on card</label>
-        <input class="payCard__input payCard__input--name" id="payCard__name" type="text" placeholder="   Placeholder Text" required/>
+        <input class="payCard__input payCard__input--name" id="payCard__name" type="text" placeholder="Placeholder Text" required/>
         <label class="payCard__label payCard__label--number" for="card">Card number</label>
         <input class="payCard__input payCard__input--number1" type="number" id="card" maxlength="4" required/>
         <input class="payCard__input payCard__input--number2" type="number" maxlength="4" required/>

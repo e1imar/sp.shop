@@ -23,7 +23,7 @@
     </div>
     <div class="basket__promo">
       <h4 class="basket__promoHeader">Promo code</h4>
-      <input class="basket__input" type="text" placeholder="   Placeholder Text"/>
+      <input class="basket__input" type="text" placeholder="Placeholder Text"/>
       <button class="button">Apply</button>
     </div>
     <div class="counter">
