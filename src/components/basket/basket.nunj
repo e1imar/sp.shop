@@ -4,14 +4,41 @@
   {% set shipping = 150 %}
   {% set total = 0 %}
 
+  <script>
+    let items = [],
+    subtotal = {{subtotal}},
+    tax = {{tax}},
+    shipping = {{shipping}},
+    total = {{total}},
+    currentItem
+
+    function recount () {
+      subtotal = 0
+      total = 0
+      items.forEach(i => {subtotal+= i.price * i.count})
+      if (subtotal > 0) {
+        tax = 100
+        shipping = 150
+      }
+      else {
+        tax = 0
+        shipping = 0
+      }
+      total = tax + shipping + subtotal
+      subtotalTag.textContent = subtotal
+      totalTag.textContent = total
+      taxTag.textContent = tax
+      shippingTag.textContent = shipping
+    }
+  </script>
   <div class="basket">
     <div class="basket__items">
       <h2 class="basket__header">My basket</h2>
       <ul class="basket__list">
         {% for item in items %}
-        {% set subtotal = subtotal + item.price %}
-        {% set count = 1 %}
-          <li class="item">
+          {% set subtotal = subtotal + item.price %}
+          {% set count = 1 %}
+          <li class="item item--{{loop.index}}">
             <img class="item__img" src="{{item.img}}" alt="product's picture"></img>
             <div class="item__info">
               <h3 class="item__name">{{item.name}}</h3>
@@ -22,10 +49,58 @@
               <button class="item__button item__plus" type="button">
                 <img src="/assets/images/Vector(2).png" alt="plus button"/>
               </button>
-              <span class="item__price">$ {{item.price * count}}</span>
+              <span class="item__price">$ <span class="item__priceNumber">{{item.price * count}}</span></span>
             </div>
-            <button class="item__button"><img src="/assets/images/Vector(3).png" alt="close"/></button>
+            <button class="item__close"><img src="/assets/images/Vector(3).png" alt="close"/></button>
           </li>
+          <script>
+            items.push({
+              index: {{loop.index0}},
+              name: '{{item.name}}',
+              price: {{item.price}},
+              count: {{count}},
+              node: document.querySelector('.item--{{loop.index}}'),
+              getPriceTag: function () {return this.node.querySelector('.item__priceNumber')},
+              getCountTag: function () {return this.node.querySelector('.item__count')},
+              getMinusTag: function () {return this.node.querySelector('.item__minus')},
+              getPlusTag: function () {return this.node.querySelector('.item__plus')},
+              getCloseTag: function () {return this.node.querySelector('.item__close')},
+              getId: function () {return this.id}
+            })
+
+            currentItem = items[{{loop.index0}}]
+
+            {# minus #}
+            currentItem.getMinusTag().addEventListener('click', e => {
+              const item = items.find(e => e.index === {{loop.index0}})
+
+              if (item.count >= 1) item.count--
+              item.getCountTag().textContent = item.count
+              item.getPriceTag().textContent = item.price * item.count
+
+              recount()
+            })
+
+            {# plus #}
+            currentItem.getPlusTag().addEventListener('click', e => {
+              const item = items.find(e => e.index === {{loop.index0}})
+
+              item.count++
+              item.getCountTag().textContent = item.count
+              item.getPriceTag().textContent = item.price * item.count
+
+              recount()
+            })
+
+            {# close #}
+            currentItem.getCloseTag().addEventListener('click', e => {
+              const item = items.find(e => e.index === {{loop.index0}})
+            
+              item.node.remove() 
+              items = items.filter(i => i !== item)
+              recount()
+            })
+          </script>
         {% endfor %}
       </ul>
     </div>
@@ -36,10 +111,17 @@
     </div>
     <div class="counter">
       {% set total = subtotal + tax + shipping %}
-      <div class="counter__info counter__info">Subtotal <span class="counter__price">$<span class="counter__number">{{1050}}</span></span></div>
-      <div class="counter__info counter__info">Tax <span class="counter__price">$<span>{{tax}}</span></span></div>
-      <div class="counter__info counter__info">Shipping <span class="counter__price">$<span>{{shipping}}</span></span></div>
-      <div class="counter__info counter__info--total">Total <span class="counter__price counter__price--total">$<span class="counter__number">{{total}}</span></span></div>
+      <div class="counter__info counter__info">Subtotal <span class="counter__price">$<span class="counter__number counter__subtotal">{{1050}}</span></span></div>
+      <div class="counter__info counter__info">Tax <span class="counter__price">$<span class="counter__tax">{{tax}}</span></span></div>
+      <div class="counter__info counter__info">Shipping <span class="counter__price">$<span class="counter__shipping">{{shipping}}</span></span></div>
+      <div class="counter__info counter__info--total">Total <span class="counter__price counter__price--total">$<span class="counter__number counter__total">{{total}}</span></span></div>
     </div>
   </div>
+  <script>
+    const taxTag = document.querySelector('.counter__tax'),
+    shippingTag = document.querySelector('.counter__shipping'),
+    totalTag = document.querySelector('.counter__total'),
+    subtotalTag = document.querySelector('.counter__subtotal')
+    console.log(items)
+  </script>
 {% endmacro %}
