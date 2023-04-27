@@ -16,9 +16,11 @@
 ] %}
 
 {% block content %}
-	{% include '../includes/header/header.nunj' %}
-	<main class="main">
-		{{stepper(content)}}
-		{{basket(products)}}
-	</main>
+	<div class="wrapper1200">
+		{% include '../includes/header/header.nunj' %}
+		<main class="main">
+			{{stepper(content)}}
+			{{basket(products)}}
+		</main>
+	</div>
 {% endblock %}

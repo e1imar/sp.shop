@@ -122,6 +122,5 @@
     shippingTag = document.querySelector('.counter__shipping'),
     totalTag = document.querySelector('.counter__total'),
     subtotalTag = document.querySelector('.counter__subtotal')
-    console.log(items)
   </script>
 {% endmacro %}
