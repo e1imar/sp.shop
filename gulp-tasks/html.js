@@ -3,7 +3,7 @@ import nunjucksRender from 'gulp-nunjucks-api';
 import notifier from 'node-notifier';
 import plumber from 'gulp-plumber';
 import beautify from 'gulp-jsbeautifier';
-import minifyInline from 'gulp-minify-inline-scripts';
+// import minifyInline from 'gulp-minify-inline-scripts';
 import gulpif from 'gulp-if';
 import log from 'fancy-log';
 import colors from 'ansi-colors';
@@ -57,6 +57,6 @@ export default function html() {
 				})
 			)
 		)
-		.pipe(gulpif(PRODUCTION, minifyInline()))
+		// .pipe(gulpif(PRODUCTION, minifyInline()))
 		.pipe(gulp.dest(PATHS.build.html));
 }
