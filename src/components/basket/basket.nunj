@@ -4,6 +4,33 @@
   {% set shipping = 150 %}
   {% set total = 0 %}
 
+  <script>
+    let items = [],
+    subtotal = 0,
+    tax = 100,
+    shipping = 150,
+    total = 0,
+    currentItem
+
+    function recount () {
+      subtotal = 0
+      total = 0
+      items.forEach(i => {subtotal+= i.price * i.count})
+      if (subtotal > 0) {
+        tax = 100
+        shipping = 150
+      }
+      else {
+        tax = 0
+        shipping = 0
+      }
+      total = tax + shipping + subtotal
+      subtotalTag.textContent = subtotal
+      totalTag.textContent = total
+      taxTag.textContent = tax
+      shippingTag.textContent = shipping
+    }
+  </script>
   <div class="basket">
     <div class="basket__items">
       <h2 class="basket__header">My basket</h2>
@@ -91,32 +118,6 @@
     </div>
   </div>
   <script>
-    let items = [],
-    subtotal = 0,
-    tax = 100,
-    shipping = 150,
-    total = 0,
-    currentItem
-
-    function recount () {
-      subtotal = 0
-      total = 0
-      items.forEach(i => {subtotal+= i.price * i.count})
-      if (subtotal > 0) {
-        tax = 100
-        shipping = 150
-      }
-      else {
-        tax = 0
-        shipping = 0
-      }
-      total = tax + shipping + subtotal
-      subtotalTag.textContent = subtotal
-      totalTag.textContent = total
-      taxTag.textContent = tax
-      shippingTag.textContent = shipping
-    }
-    
     const taxTag = document.querySelector('.counter__tax'),
     shippingTag = document.querySelector('.counter__shipping'),
     totalTag = document.querySelector('.counter__total'),
