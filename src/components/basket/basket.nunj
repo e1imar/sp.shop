@@ -6,10 +6,10 @@
 
   <script>
     let items = [],
-    subtotal = {{subtotal}},
-    tax = {{tax}},
-    shipping = {{shipping}},
-    total = {{total}},
+    subtotal = 0,
+    tax = 100,
+    shipping = 150,
+    total = 0,
     currentItem
 
     function recount () {
