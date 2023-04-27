@@ -116,8 +116,7 @@
       taxTag.textContent = tax
       shippingTag.textContent = shipping
     }
-  </script>
-  <script>
+    
     const taxTag = document.querySelector('.counter__tax'),
     shippingTag = document.querySelector('.counter__shipping'),
     totalTag = document.querySelector('.counter__total'),
